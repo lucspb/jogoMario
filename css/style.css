@@ -1,0 +1,35 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; 
+    /* o overflow é usado para tudo que sair do quadro, não aparecer na tela*/
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    animation: pipe-animation 2s infinite linear;
+}
+
+/* animação */
+@keyframes pipe-animation {
+    /* para começar fora da tela */
+    
+    from{
+        right: -80px;
+    }
+
+    to{
+        right:100%;
+    }
+}
